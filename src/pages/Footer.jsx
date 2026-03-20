@@ -1,0 +1,56 @@
+import { BsLinkedin } from "react-icons/bs";
+import { FaXTwitter } from "react-icons/fa6";
+import { BsGithub } from "react-icons/bs";
+import { BsInstagram } from "react-icons/bs";
+
+const iconStyle = "hover:text-[#EB6200] hover:scale-110 transition";
+
+function Footer() {
+  return (
+    <div className="bg-[#0F0F0F] px-6 md:px-20 py-10 mt-10 text-white">
+      <div className="text-center pb-3">
+        <h1 className="text-[#AAAAAA] hover:text-[#EB6200]">Connect with me</h1>
+      </div>
+      {/* Social Icons */}
+      <div className="mt-4 mb-8 flex justify-center items-center  gap-5 text-xl text-[#AAAAAA]">
+        <a href="https://www.linkedin.com/in/pandurang-kendre-840474274?" target="_blank">
+          <BsLinkedin className={iconStyle} />
+        </a>
+
+        <a href="" target="_blank">
+          <FaXTwitter className={iconStyle} />
+        </a>
+
+        <a href="https://github.com/pandurangkendre9709-jpg" target="_blank">
+          <BsGithub className={iconStyle} />
+        </a>
+
+        <a href="https://www.instagram.com/pandurang.kendre.33?igsh=MTB5cWp3dWEwaTZ0Zg==" target="_blank">
+          <BsInstagram className={iconStyle} />
+        </a>
+      </div>
+      <div className="mt-8 mb-3 h-[1px] w-full bg-gradient-to-r from-transparent via-[#2a2a2a] to-transparent"></div>
+      <div className="flex flex-col gap-6 md:flex-row justify-between md:py-5 text-xs md:text-sm text-[#AAAAAA]">
+        <p className="text-center md:text-left">
+          © 2026 Pandurang Kendre. All rights reserved.
+        </p>
+        <div className="flex gap-7 justify-center">
+          <a href="#home" className="hover:text-white">
+            Home
+          </a>
+          <a href="#about" className="hover:text-white">
+            About me
+          </a>
+          <a href="#projects" className="hover:text-white">
+            My works
+          </a>
+          <a href="#contact" className="hover:text-white">
+            Contact
+          </a>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default Footer;
