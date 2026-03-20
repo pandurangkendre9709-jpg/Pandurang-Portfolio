@@ -3,7 +3,7 @@ import RollingNumber from "./RollingNumber";
 function AboutBanner() {
   const stats = [
     {
-      value: 12,
+      value: 5,
       suffix: "+",
       title: "Projects",
       subtitle: "completed",
@@ -13,7 +13,7 @@ function AboutBanner() {
       subColor: "text-[#EB6200]",
     },
     {
-      value: 1.5,
+      value: 0.8,
       suffix: "",
       title: "Years",
       subtitle: "of experience",
@@ -23,7 +23,7 @@ function AboutBanner() {
       subColor: "text-black",
     },
     {
-      value: 6,
+      value: 3,
       suffix: "+",
       title: "Courses",
       subtitle: "completed",

@@ -68,7 +68,7 @@ function Navbar() {
       {/* Mobile Navbar */}
       <div className="flex md:hidden justify-between items-center px-6">
 
-        <h1 className="font-bold text-lg">Kamal</h1>
+        <h1 className="font-bold text-lg">Pandurang</h1>
 
         <button onClick={() => setMenuOpen(!menuOpen)}>
           {menuOpen ? <HiX size={26} /> : <HiMenu size={26} />}
