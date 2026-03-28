@@ -63,12 +63,13 @@ export default function SkillsOrbit() {
     },
     {
       icon: <FaWordpress className="text-sky-400" />,
-      name: "React1",
-      desc: "Component based UI with hooks.",
-    },{
+      name: "WordPress",
+      desc: "Content management system.",
+    },
+    {
       icon: <FaFigma className="text-sky-400" />,
-      name: "React1",
-      desc: "Component based UI with hooks.",
+      name: "Figma",
+      desc: "UI/UX design tool.",
     },
     
   ];

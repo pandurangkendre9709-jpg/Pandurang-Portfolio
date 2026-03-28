@@ -1,27 +1,31 @@
 import { useEffect, useState } from "react";
 
-function RollingNumber({ value, duration = 3000 }) {
-  const [number, setNumber] = useState(0);
+function RollingNumber({ value }) {
+  const decimals = value % 1 !== 0 ? 1 : 0;
+  const [displayValue, setDisplayValue] = useState(0);
 
   useEffect(() => {
-    let start = 0;
-    const increment = value / (duration / 16);
+    const duration = 1200;
+    const steps = 40;
+    const stepTime = duration / steps;
+    let currentStep = 0;
 
-    const counter = setInterval(() => {
-      start += increment;
+    setDisplayValue(0);
 
-      if (start >= value) {
-        setNumber(value);
-        clearInterval(counter);
-      } else {
-        setNumber(start);
+    const interval = setInterval(() => {
+      currentStep += 1;
+      const progress = Math.min(currentStep / steps, 1);
+      setDisplayValue(value * progress);
+
+      if (progress >= 1) {
+        clearInterval(interval);
       }
-    }, 16);
+    }, stepTime);
 
-    return () => clearInterval(counter);
-  }, [value, duration]);
+    return () => clearInterval(interval);
+  }, [value]);
 
-  return <span>{number.toFixed(value % 1 !== 0 ? 1 : 0)}</span>;
+  return <span>{displayValue.toFixed(decimals)}</span>;
 }
 
 export default RollingNumber;
